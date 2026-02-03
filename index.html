@@ -2,54 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Semantic Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
-<body>
-<header>
-    <h2>Header</h2>
-</header>
-<nav>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-    </ul>
-</nav>
-<main>
-   <section>
-     <h1>Frontend Development</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni assumenda quaerat nam esse unde fugiat voluptates veritatis. Est error, tempore in odit doloremque rerum voluptate, consectetur, illo assumenda iste unde quidem autem consequatur tempora! Aut facilis, ratione corporis beatae fuga quis tempore voluptatem. Nisi, magnam.</p>
-   </section>
- <article>
-    <h3>What is HTML?</h3>
-    <p>
-        HTML ka full form <strong>HyperText Markup Language</strong> hai.
-        HTML web pages ka basic structure banane ke liye use hoti hai.
-    </p>
+<style>
+    header{
+        padding: 12px 50px;
+        background-color: #0a192f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav a{
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 17px;
+        color: #eaf6f6;
+        font-weight: 500;
+    }
 
-    <p>
-        HTML ki madad se hum headings, paragraphs, images, links aur forms
-        web page par show kar sakte hain.
-    </p>
+    nav a:hover{
+        color: #00e5cc;
+    }
+    @media (max-width: 760px) {
+        header{
+            display: block;
+            padding: 5px 10px;
+           
+        }
+        nav{
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 20px;
+        }
+        
+    }
+</style>
 
-    <p>
-        HTML koi programming language nahi hai, balkay ek markup language hai
-        jo browser ko batati hai ke content kaise display karna hai.
-    </p>
-</article>
-<aside>
-    <h4>HTML Logo</h4>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(270deg, #00e5cc, #0077ff);
+">
 
-    <img src="html-logo.png" alt="HTML Logo" width="150">
+    <header >
+        <h1 style="color: #00e5cc; margin: 0;">Coder</h1>
 
-    <p>
-        HTML web development seekhne ka pehla step hota hai.
-    </p>
-</aside>
+        <nav>
+            <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+            <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+            <a href="https://www.w3schools.com/js/default.asp">JS</a>
+            <a href="https://www.w3schools.com/python/default.asp">Python</a>
+            <a href="https://www.w3schools.com/php/default.asp">PHP</a>
+            <a href="https://www.w3schools.com/cpp/default.asp">C++</a>
+        </nav>
 
-</main>
+        <button style="
+            border: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #00e5cc, #0077ff);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        ">
+            Contact Us
+        </button>
+    </header>
 
 </body>
 </html>
