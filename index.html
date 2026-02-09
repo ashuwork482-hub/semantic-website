@@ -9,7 +9,7 @@
 <style>
     header{
         padding: 12px 50px;
-        background-color: #0a192f;
+        color: black;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -18,34 +18,175 @@
         margin-right: 20px;
         text-decoration: none;
         font-size: 17px;
-        color: #eaf6f6;
+        color: #242525;
         font-weight: 500;
     }
 
     nav a:hover{
         color: #00e5cc;
     }
+ main{
+padding: 0px 80px;
+ }
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+     min-height: 70vh;   /* 👈 FULL SCREEN */
+   
+}
+
+.about,
+.contact{
+    width: 100%;
+   
+     min-height: 100vh;   /* 👈 FULL SCREEN */
+}
+
+/* ABOUT SECTION */
+.about{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.about-image,
+.about-text{
+    width: 50%;
+}
+
+.about-image img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* CONTACT SECTION */
+.contact{
+    margin-top: 120px;
+}
+
+fieldset legend{
+    font-weight: 600;
+    font-size: 20px;
+}
+fieldset{
+    max-width: 550px;
+    margin: auto;
+    height: auto;
+    color: #0385e8;
+}
+
+.contact form{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact input,
+.contact textarea{
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.contact button{
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00e5cc, #0077ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 760px){
+    .about{
+        flex-direction: column;
+        text-align: center;
+        min-height: 100vh;
+        
+    }
+    main{
+        padding: 0px 20px;
+    }
+
+    .about-image,
+    .about-text{
+        width: 100%;
+    }
+    .contact{
+        margin-top: 100px;
+          min-height: 100vh;
+        
+    }
+}
+
+.text-section,
+.image-section{
+    width: 50%;
+}
+
+.image-section{
+    text-align: center;
+}
+.logo{
+    height: 80px;      /* header ke liye perfect */
+    width: auto;
+}
+
     @media (max-width: 760px) {
         header{
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+           
             padding: 5px 10px;
            
         }
         nav{
             margin-top: 20px;
         }
-        .button{
-            margin-top: 20px;
-        }
-        
+       
+      
+    .button{
+        display: block;
+        margin: 20px auto;
+        text-align: center;
     }
+        .hero{
+            display: block;
+            padding: 40px 0px;
+        }
+         .text-section,
+    .image-section{
+        width: 100%;   /* ya 90% */
+        margin: auto;
+    }
+
+    .image-section img{
+        width: 100%;
+        margin-top: 40px;
+    }
+     .logo{
+        margin: auto;
+        height: 64px;
+    }
+}
+        
+   
 </style>
 
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(270deg, #00e5cc, #0077ff);
-">
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif;\">
 
     <header >
-        <h1 style="color: #00e5cc; margin: 0;">Coder</h1>
+<img src="mylogo3.png" alt="Ayesha Logo" class="logo">
 
         <nav>
             <a href="https://www.w3schools.com/html/default.asp">HTML</a>
@@ -56,8 +197,7 @@
             <a href="https://www.w3schools.com/cpp/default.asp">C++</a>
         </nav>
 
-     <a href="https://wa.me/923192957309?text=Hello%20I%20want%20to%20contact%20you" target="_blank" style="
-    display: inline-block;
+     <a class="button" href="https://wa.me/923192957309?text=Hello%20I%20want%20to%20contact%20you" target="_blank" style="
     text-decoration: none;
     border: none;
     padding: 10px 22px;
@@ -71,8 +211,66 @@
     Contact Us
 </a>
 
-
     </header>
+
+   <main >
+<section class="hero">
+    <article class="text-section">
+        <h1>Ayesha</h1>
+        <p style="text-align:justify;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, animi culpa ut nemo minus amet saepe laudantium a. Ullam mollitia modi sed ipsa libero quas tempora ducimus quaerat alias nobis laborum necessitatibus dolorum praesentium numquam incidunt, commodi molestiae. Ut fugiat omnis sequi nobis dolore, placeat similique voluptas nam harum, enim nisi distinctio alias. Delectus ratione eligendi doloribus eos, in blanditiis nesciunt fugit? Dicta, dolorum eum enim obcaecati expedita assumenda quibusdam optio dolorem. Et, suscipit eius nulla placeat enim libero repellat eligendi eos aperiam nostrum reprehenderit labore temporibus repudiandae! Officiis esse veritatis deserunt velit libero cum repellendus, quod at explicabo officia.
+        </p>
+        <a href="mailto:ashii14245@gmail.com?subject=Hello&body=Hello%20I%20just%20visited%20your%20website%20and%20wanted%20to%20connect%20with%20you%20directly%20via%20Gmail." style="display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #202221, #bbbfc4);
+    color:  #e8ecec;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;">Connect with E-mail</a>
+    </article>
+
+<section class="image-section">
+       
+            <img src="heroimg.jfif" width="80%" alt="">
+           
+       
+    </section>
+
+</section>
+<section class="about">
+    <div class="about-image">
+        <img src="./about2.png" alt="About Me">
+    </div>
+
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quis ab. Inventore atque temporibus, ut omnis asperiores sapiente eligendi quos, maxime pariatur a maiores expedita, doloribus placeat. Eius, officiis iste.        </p>
+    </div>
+</section>
+
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+  <fieldset>
+    <legend>Contact Me</legend>
+    
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+  </fieldset>
+</section>
+
+</main>
+
 
 </body>
 </html>
