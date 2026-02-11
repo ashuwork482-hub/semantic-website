@@ -260,18 +260,21 @@ fieldset{
     <legend>Contact Me</legend>
     
 
-  <form action="https://formsubmit.co/ashuwork482@gmail.com" method="POST">
-<input type="hidden" name="_next" value="https://ashuwork482-hub.github.io/semantic-website/thankyou.html">
+ <form action="https://formsubmit.co/ashuwork482@gmail.com" method="POST">
+    
+    <!-- Ye aapka custom thank-you page hai -->
+    <input type="hidden" name="_redirect" value="https://ashuwork482-hub.github.io/semantic-website/thankyou.html">
+    
+    <!-- Captcha disable kar diya -->
+     <!-- sometimes formsubmit captcha ki waja se bydefault formSubmit ka page dikha raha hota ha  -->
+    <input type="hidden" name="_captcha" value="false">
 
     <input type="text" name="name" placeholder="Your Name" required>
-
     <input type="email" name="email" placeholder="Your Email" required>
-
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
     <button type="submit">Send Message</button>
-
 </form>
+
 
   </fieldset>
 </section>
