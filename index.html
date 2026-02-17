@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="html-logo.png">
     <title>Document</title>
 </head>
 
@@ -38,11 +39,149 @@ padding: 0px 80px;
 }
 
 .about,
-.contact{
+.contact,
+.product-sec{
     width: 100%;
    
      min-height: 100vh;   /* 👈 FULL SCREEN */
 }
+.product-sec{
+    padding: 60px 40px;
+    text-align: center;
+   
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.product-sec h1{
+    margin-bottom: 40px;
+}
+
+.main-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box{
+    width: 220px;
+    height: 360px; /* fixed height for all cards */
+    background-color: rgba(255,255,255,0.95); /* thodi transparency */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box:hover{
+    transform: translateY(-8px);
+}
+
+.box img{
+    width: 100%;
+    height: 180px;   /* all images same height */
+    object-fit: cover; /* crop image nicely */
+    border-radius: 10px;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: crimson;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: gray;
+    margin: 5px 0;
+}
+
+.new-price{
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button{
+    margin-top: auto; /* push button to bottom */
+    padding: 8px 15px;
+    border: none;
+    background-color: #0077ff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #ff4081;
+}
+
+/* MOBILE STYLING */
+@media (max-width: 760px){
+    .product-sec{
+        padding: 40px 10px;
+        background-size: cover; /* background cover screen */
+        background-position: center;
+        
+    }
+
+    .product-sec h1{
+        font-size: 28px; /* chhoti screen ke liye heading chhoti */
+        margin-bottom: 30px;
+    }
+    .main-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        overflow-x: hidden; /* extra safety */
+        margin-bottom: 20px
+    }
+
+    .box {
+        width: 100%;       /* parent ke andar fit ho jaye */
+        max-width: 400px;  /* max size set karo taake bahut badi screen pe bhi fit ho */
+        height: auto;
+        box-shadow: 6px 0px 18px  rgba(0,0,0,0.3);
+         padding: 15px;
+    }
+
+   .box img {
+    width: 100%;
+    height: auto; /* mobile ke liye auto better hai */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+   
+
+    .badge{
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .old-price{
+        font-size: 14px;
+    }
+
+    .new-price{
+        font-size: 16px;
+    }
+}
+
 
 /* ABOUT SECTION */
 .about{
@@ -123,7 +262,6 @@ fieldset{
         width: 100%;
     }
     .contact{
-        margin-top: 100px;
           min-height: 100vh;
         
     }
@@ -208,6 +346,7 @@ fieldset{
     font-weight: bold;
     cursor: pointer;
 ">
+
     Contact Us
 </a>
 
@@ -253,9 +392,77 @@ fieldset{
 </section>
 
 
+<section class="product-sec">
 
+    <h1>EID SPECIAL OFFER 50% </h1>
+   <div class="main-box" >
+       <div class="box">
+            <span class="badge">50% OFF</span>
+           <a href="https://moorpalace.pk/cdn/shop/files/DAD0F93C-5E38-4961-82EE-E760507B8E11.jpg?v=1746123258">
+             <img src="./deal1.webp" alt="">
+           </a>
+            <h3>
+Full face makeup deal box</h3>
+            <p class="old-price">Rs. 8000</p>
+            <p class="new-price">Rs. 4000</p>
+            <button>Add to Cart</button>
+        </div>
+    <div class="box">          <span class="badge">50% OFF</span>
+         <a href="https://moorpalace.pk/cdn/shop/files/4A917577-BB30-4513-9435-5C71AF99AB3F.jpg?v=1768159791">
+            <img src="./glamour.webp" alt="glamour deal">
+         </a>
+            <h3>
+Glamour Basket</h3>
+            <p class="old-price">Rs. 8000</p>
+            <p class="new-price">Rs. 4000</p>
+            <button>Add to Cart</button></div>
+    <div class="box">
+             <span class="badge">50% OFF</span>
+             <a href="https://moorpalace.pk/cdn/shop/files/82D52F31-61E1-488D-91E8-3B01FA268C60.jpg?v=1765646949">
+                <img src="./glam deal.jpg" alt="">
+             </a>
+            <h3>Glam Girly Deal</h3>
+            <p class="old-price">Rs. 8000</p>
+            <p class="new-price">Rs. 4000</p>
+            <button>Add to Cart</button>
+    </div>
+    <div class="box">
+               <span class="badge">50% OFF</span>
+         <a href="https://moorpalace.pk/cdn/shop/files/CE57A291-6D29-49D7-A80B-8F33128F1BDB.jpg?v=1755551251">
+            <img src="./gloss.webp" alt="">
+         </a>
+            <h3>Gloss Bomb Deal</h3>
+            <p class="old-price">Rs. 8000</p>
+            <p class="new-price">Rs. 4000</p>
+            <button>Add to Cart</button>
+    </div>
+    <div class="box">
+              <span class="badge">50% OFF</span>
+              <a href="https://moorpalace.pk/cdn/shop/files/85782A0E-E335-4DD6-A92F-3AE99E5752E3.jpg?v=1755460917">
+                <img src="./reasonable.webp" alt="">
+              </a>
+            <h3>Reasonable Deal</h3>
+            <p class="old-price">Rs. 12000</p>
+            <p class="new-price">Rs. 6000</p>
+            <button>Add to Cart</button>
+    </div>
+    <div class="box">
+               <span class="badge">50% OFF</span>
+<a href="https://moorpalace.pk/cdn/shop/files/926980B9-4D31-4AB9-9E00-13EDF24A9777.jpg?v=1728553726">
+    <img src="glossesbox.webp" alt="">
+</a>
+            <h3>Color castle nude glosses box
+</h3>
+            <p class="old-price">Rs. 8000</p>
+            <p class="new-price">Rs. 4000</p>
+            <button>Add to Cart</button>
+    </div>
+
+
+   </div>
+</section>
     <!-- CONTACT SECTION -->
-    <section class="contact">
+    <section class="contact" >
   <fieldset>
     <legend>Contact Me</legend>
     
@@ -270,8 +477,7 @@ fieldset{
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
      <!-- Redirect after submission -->
-      <input type="hidden" name="_next" value="https://ashuwork482-hub.github.io/thankyoupage/index.html">
-
+<input type="hidden" name="_next" value="https://ashuwork482-hub.github.io/thankyou.html">
 
     <button type="submit">Send Message</button>
 </form>
@@ -281,7 +487,15 @@ fieldset{
 </section>
 
 </main>
+<script>
+const buttons = document.querySelectorAll('.cart-btn'); // correct class name
+buttons.forEach(function(button){
+    button.addEventListener('click', function(){
+        alert("Your product has been added to cart!");
+    })
+})
 
+</script>
 
 </body>
 </html>
