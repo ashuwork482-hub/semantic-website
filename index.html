@@ -14,11 +14,12 @@
 
 <style>
     header{
-        padding: 12px 50px;
+        padding: 10px 50px;
         color: black;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid #000;
     }
     nav a{
         margin-right: 20px;
@@ -31,6 +32,7 @@
     nav a:hover{
         color: #00e5cc;
     }
+  
  main{
 padding: 0px 80px;
  }
@@ -39,7 +41,7 @@ padding: 0px 80px;
     align-items: center;
     justify-content: center;
  
-     min-height: 70vh;   /* 👈 FULL SCREEN */
+     min-height: 80vh;   /* 👈 FULL SCREEN */
    
 }
 
@@ -48,7 +50,7 @@ padding: 0px 80px;
 .product-sec{
     width: 100%;
    
-     min-height: 100vh;   /* 👈 FULL SCREEN */
+     min-height: auto;   /* 👈 FULL SCREEN */
 }
 .product-sec{
     padding: 60px 40px;
@@ -208,7 +210,7 @@ button:hover{
 
 /* CONTACT SECTION */
 .contact{
-    margin-top: 120px;
+    margin: 20px 0px;
 }
 
 fieldset legend{
@@ -267,7 +269,8 @@ fieldset{
         width: 100%;
     }
     .contact{
-          min-height: 100vh;
+          min-height: auto;
+
         
     }
 }
@@ -280,7 +283,7 @@ fieldset{
 .image-section{
     text-align: center;
 }
-.logo{
+.namelogo{
     height: 80px;      /* header ke liye perfect */
     width: auto;
 }
@@ -288,7 +291,6 @@ fieldset{
     @media (max-width: 760px) {
         header{
             display: flex;
-            flex-wrap: wrap;
            
             padding: 5px 10px;
            
@@ -296,7 +298,7 @@ fieldset{
         nav{
             margin-top: 20px;
         }
-       
+     
       
     .button{
         display: block;
@@ -317,8 +319,8 @@ fieldset{
         width: 100%;
         margin-top: 40px;
     }
-     .logo{
-        margin: auto;
+     .namelogo{
+      
         height: 64px;
     }
 }
@@ -400,44 +402,87 @@ footer .copyright {
         align-items: center;
     }
 }
+/* Hamburger icon hidden on desktop */
+.menu-icon{
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 760px){
+
+    .menu-icon{
+        display: block;
+        transition: 0.3s ease-in-out;
+    }
+
+    nav{
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background: white;
+        width: 220px;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        padding: 10px 0;
+    }
+
+    nav a{
+        display: block;
+        padding: 12px;
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav.active{
+        display: flex;
+    }
+      #menu-open, #menu-close {
+        transition: opacity 0.3s ease;
+    }
+}
+
 
 </style>
 
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;\">
 
-    <header >
-<img src="mylogo3.png" alt="Ayesha Logo" class="logo">
+    <header>
 
-        <nav>
-            <a href="https://www.w3schools.com/html/default.asp">HTML</a>
-            <a href="https://www.w3schools.com/css/default.asp">CSS</a>
-            <a href="https://www.w3schools.com/js/default.asp">JS</a>
-            <a href="https://www.w3schools.com/python/default.asp">Python</a>
-            <a href="https://www.w3schools.com/php/default.asp">PHP</a>
-            <a href="https://www.w3schools.com/cpp/default.asp">C++</a>
-        </nav>
+<img src="mylogo3.png" alt="Ayesha Logo" class="namelogo">
 
-     <a class="button" href="https://wa.me/923192957309?text=Hello%20I%20want%20to%20contact%20you" target="_blank" style="
-    text-decoration: none;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #00e5cc, #0077ff);
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-">
+<!-- 👇 YEH ADD KARNA HAI -->
+<div class="menu-icon" id="menu-icon">
+    <i class="fas fa-bars" id="menu-open"></i>
+    <i class="fas fa-times" id="menu-close" style="display:none;"></i>
+</div>
 
-    Contact Us
-</a>
+<nav id="navbar">
+   <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+   <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+   <a href="https://www.w3schools.com/js/default.asp">JS</a>
+   <a href="https://www.w3schools.com/python/default.asp">Python</a>
+   <a href="https://www.w3schools.com/php/default.asp">PHP</a>
+   <a href="https://www.w3schools.com/cpp/default.asp">C++</a>
 
-    </header>
+   <!-- 👇 CONTACT BUTTON NAV KE ANDAR -->
+   <a class="button" href="https://wa.me/923192957309?text=Hello%20I%20want%20to%20contact%20you" target="_blank">
+      Contact Us
+   </a>
+</nav>
+
+
+</header>
+
 
    <main >
 <section class="hero" id="home">
     <article class="text-section">
-        <h1>Ayesha</h1>
+        <h1>Ayesha Shakoor</h1>
         <p style="text-align:justify;">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, animi culpa ut nemo minus amet saepe laudantium a. Ullam mollitia modi sed ipsa libero quas tempora ducimus quaerat alias nobis laborum necessitatibus dolorum praesentium numquam incidunt, commodi molestiae. Ut fugiat omnis sequi nobis dolore, placeat similique voluptas nam harum, enim nisi distinctio alias. Delectus ratione eligendi doloribus eos, in blanditiis nesciunt fugit? Dicta, dolorum eum enim obcaecati expedita assumenda quibusdam optio dolorem. Et, suscipit eius nulla placeat enim libero repellat eligendi eos aperiam nostrum reprehenderit labore temporibus repudiandae! Officiis esse veritatis deserunt velit libero cum repellendus, quod at explicabo officia.
         </p>
@@ -518,7 +563,7 @@ Glamour Basket</h3>
             <p class="old-price">Rs. 8000</p>
             <p class="new-price">Rs. 4000</p>
             <button  class="cart-btn">Add to Cart</button>
-    </div>
+    <!-- </div> -->
     <div class="box">
               <span class="badge">50% OFF</span>
               <a href="https://moorpalace.pk/cdn/shop/files/85782A0E-E335-4DD6-A92F-3AE99E5752E3.jpg?v=1755460917">
@@ -529,7 +574,7 @@ Glamour Basket</h3>
             <p class="new-price">Rs. 6000</p>
             <button  class="cart-btn">Add to Cart</button>
     </div>
-    <div class="box">
+    <div class="box" style="margin-bottom: 20px;">
                <span class="badge">50% OFF</span>
 <a href="https://moorpalace.pk/cdn/shop/files/926980B9-4D31-4AB9-9E00-13EDF24A9777.jpg?v=1728553726">
     <img src="glossesbox.webp" alt="">
@@ -600,11 +645,28 @@ Glamour Basket</h3>
 
 <script>
 const buttons = document.querySelectorAll('.cart-btn'); // correct class name
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.getElementById("navbar");
+const menuOpen = document.getElementById("menu-open");
+const menuClose = document.getElementById("menu-close");
 buttons.forEach(function(button){
     button.addEventListener('click', function(){
         alert("Your product has been added to cart!");
     })
 })
+
+menuIcon.addEventListener('click', function() {
+    navbar.classList.toggle("active");
+
+    // Toggle icons
+    if(navbar.classList.contains("active")){
+        menuOpen.style.display = "none"; // hide hamburger
+        menuClose.style.display = "block"; // show X
+    } else {
+        menuOpen.style.display = "block"; // show hamburger
+        menuClose.style.display = "none"; // hide X
+    }
+});
 
 </script>
 
